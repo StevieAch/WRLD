@@ -1,3 +1,4 @@
 {
-  "test/unit.py::Test::test_calculate_distance": true
+  "test/unit.py::Test::test_calculate_distance": true,
+  "test/unit.py::TestFindFeaturesShortestDistance::test_simple_shortest_distance": true
 }
