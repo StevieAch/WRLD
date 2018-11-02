@@ -21,7 +21,21 @@ def load_start():
         print('Input file could not be accessed.')
 
 def find_features_shortest_distance(start_index, feature_list):
-    pass
+    """
+    Calculate the distance from feature at start_index
+    to all features in rest of the feature_list parameter
+    :return 
+    """
+    closest_dist = 14142136  # maximum possible distance
+    closest_feature = 'feature id'
+    measure_start = start_index+1
+    measure_end = len(feature_list)
+    for i in range(measure_start, measure_end):
+        feature_distance = calculate_distance(feature_list[start_index], feature_list[i])
+        if feature_distance < closest_dist:
+            closest_dist = feature_distance
+            closest_feature = feature_list[i][0]
+    return [closest_feature, str(closest_dist)]
 
 def calculate_distance(current_feature, other_feature):
     """
@@ -35,4 +49,3 @@ def calculate_distance(current_feature, other_feature):
 if __name__ == '__main__':
     pass
 
-load_start()
